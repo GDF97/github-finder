@@ -1,0 +1,12 @@
+@import "../variables";
+@import "../mixins";
+
+.container {
+  padding-top: 3rem;
+  @include flex(column, center, center);
+  gap: 3rem;
+
+  h1 {
+    font-size: 48px;
+  }
+}

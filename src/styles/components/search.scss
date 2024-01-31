@@ -1,0 +1,55 @@
+@import "../variables";
+@import "../mixins";
+
+.search-body {
+  width: 450px;
+  min-height: 180px;
+  background-color: $cor_card;
+  border-radius: 8px;
+  @include flex(column, center, start);
+  gap: 2rem;
+  padding: 2rem;
+
+  h3 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  .input-wrapper {
+    width: 270px;
+    @include flex(row, center, space-between);
+
+    input,
+    button {
+      border: none;
+      outline: none;
+      padding: 0.5rem;
+      color: $cor_da_letra;
+      transition: 0.5s;
+    }
+
+    input {
+      border: 2px solid $cor_rosa_borda;
+      border-radius: 6px;
+      background-color: $cor_rosa_dentro_1;
+      box-shadow: 0px 0px 8px 1px $cor_rosa_sombra;
+
+      &:focus {
+        box-shadow: 0px 0px 8px 5px $cor_rosa_sombra;
+      }
+    }
+
+    button {
+      width: 35px;
+      border: 2px solid $cor_roxa_borda;
+      border-radius: 6px;
+      background-color: $cor_roxa_dentro;
+      box-shadow: 0px 0px 8px 1px $cor_roxa_sombra;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $cor_roxa_borda;
+      }
+    }
+  }
+}

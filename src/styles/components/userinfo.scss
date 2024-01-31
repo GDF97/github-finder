@@ -1,0 +1,68 @@
+@import "../variables";
+@import "../mixins";
+
+.user {
+  min-width: 450px;
+  background-color: $cor_card;
+  border-radius: 8px;
+  padding: 2rem;
+  @include flex(column, center, start);
+  gap: 1rem;
+
+  &-image {
+    width: 135px;
+    height: 135px;
+    border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid $cor_amarela_borda;
+    box-shadow: 0px 0px 6px 1px $cor_amarela_sombra;
+  }
+
+  &-location {
+    color: #ffffff80;
+  }
+
+  &-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.75rem;
+
+    div {
+      @include flex(column, center, center);
+      gap: 0.5rem;
+
+      .numbers {
+        width: 100%;
+        padding: 0.25rem 3rem;
+      }
+
+      &:nth-child(1) {
+        .numbers {
+          background-color: #fff;
+          border: 2px solid $cor_rosa_borda;
+          background-color: $cor_rosa_dentro_2;
+          box-shadow: 0px 0px 8px 1px $cor_rosa_sombra;
+        }
+      }
+
+      &:nth-child(2) {
+        .numbers {
+          background-color: #fff;
+          border: 2px solid $cor_roxa_borda;
+          background-color: $cor_roxa_dentro;
+          box-shadow: 0px 0px 8px 1px $cor_roxa_sombra;
+        }
+      }
+
+      &:nth-child(3) {
+        .numbers {
+          background-color: #fff;
+          border: 2px solid $cor_amarela_borda;
+          background-color: $cor_amarela_dentro;
+          box-shadow: 0px 0px 8px 1px $cor_amarela_sombra;
+        }
+      }
+    }
+  }
+}
